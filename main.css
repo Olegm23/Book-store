@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+div#root {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: rgb(255 255 255);
+  font-family: 'Lora', serif;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 3px;
+}
+
+.item-img {
+  width: 100%;
+}
+
+.filter-by-categories {
+  top: 0;
+  position: absolute;
+  z-index: 100;
+  margin-top: 20px;
+  left: 45px;
+  font-size: 15px;
+  border: 1px solid #cac0c0;
+  padding: 0 10px;
+  border-radius: 7px;
+}
+
+select.options {
+  margin-left: 10px;
+  padding: 4px;
+}
+
+.list-of-items {
+  line-height: 50px;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 15px;
+  width: 70%;
+  height: 100%;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.book {
+  display: inline-block;
+  position: relative;
+  padding: 7px;
+  margin-left: 10%;
+  width: 23%;
+  vertical-align: top;
+  margin-top: 75px;
+  height: 580px;
+  border: 1px solid #cac0c0;
+}
+
+.book-name {
+  color: #3f4146;
+  font-size: 16px;
+  text-transform: capitalize;
+  line-height: 20.9px;
+  margin-top: 10px;
+}
+
+.book-author {
+  line-height: 30.2px;
+  font-size: 16px;
+  color: #686a75;
+}
+
+.category {
+  font-size: 16px;
+  color: #686a75;
+  line-height: 17.2px;
+}
+
+.book-rates {
+  margin: 7px 0;
+}
+
+.book-voters {
+  color: #3f4146;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 20.9px;
+}
+
+.book-price {
+  bottom: -3px;
+  position: absolute;
+  font-size: 18px;
+  color: #3f4146;
+}
+
+.basket {
+  width: 30%;
+  position: absolute;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding-bottom: 80px;
+}
+
+.basket-heading {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.empty-basket {
+  text-align: center;
+}
+
+.basket-item {
+  column-count: 2;
+  margin-bottom: 40px;
+}
+
+.basket-item .item-img {
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.basket-item .book-name {
+  margin-left: 20px;
+}
+
+.basket-item .book-price {
+  position: relative;
+  font-size: 15px;
+  line-height: 36.9px;
+}
+
+.add-to-basket {
+  cursor: pointer;
+  border: none;
+  color: #de0d0d;
+  bottom: 10px;
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+}
+
+.add-book {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #3f4146;
+  font-size: 15px;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.add-book:hover {
+  text-decoration: underline;
+}
+
+.remove-item {
+  cursor: pointer;
+  color: #df342f;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+.remove-item:hover {
+  text-decoration: underline;
+}
+
+.quantity {
+  color: #3f4146;
+}
+
+.total-price {
+  position: fixed;
+  bottom: 0;
+  width: 15%;
+  height: 53px;
+  text-align: center;
+  color: #f2f2f3;
+  font-size: 17px;
+  border: 1px solid #ada8a8;
+  border-right: 1px solid #969595;
+  background-color: #a2a7aa;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.order {
+  position: fixed;
+  width: 15%;
+  bottom: 0;
+  right: 0;
+  background-color: #a2a7aa;
+  border: 1px solid #ada8a8;
+  cursor: pointer;
+  height: 53px;
+  border-left: none;
+  color: #f2f2f3;
+  font-size: 17px;
+}
+
+.clear-the-basket {
+  bottom: 50px;
+  position: fixed;
+  top: auto;
+  height: 7%;
+  width: 30%;
+  cursor: pointer;
+  background-color: #ec1717;
+  border: 1px solid #e44040;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #f2f2f3;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.modal-bg > div {
+  width: 400px;
+  height: 125px;
+  background: #f44336;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+}
+
+.warning-message {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.clear-basket {
+  border: 1px solid #cac0c0;
+  color: #f2f2f3;
+  background-color: #a2a7aa;
+  width: 80px;
+  margin-left: 40%;
+  cursor: pointer;
+  height: 23px;
+  padding: 0 10px;
+  border-radius: 7px;
+}
